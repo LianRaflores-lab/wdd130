@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #D3D3D3;
+    /*Deep River Black*/
+    --secondary-color: #1C1F26;
+    /*Stone Gray*/
+    --main-accent-blue: #0E8BFF;
+    /*Rapids Blue*/
+    --text-color: #fff;
+    --heading-font: "Times New Roman", "Georgia", sans-serif;
+    --font-family: "Montserrat", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---- Header ---- */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 30px;
+    border: 1px solid #777;
+    margin-bottom: 30px;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+    background-color: #cccccc;
+    /* Fallback placeholder color */
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    border: 1px solid #777;
+    background-color: #ffffff;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    border-right: 1px solid #777;
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+/* ---- Contact Info ---- */
+.contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* ---- Main Content Layout (Map & Form Side-by-Side) ---- */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+/* Map Styling */
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    background-color: #e0e0e0;
+    /* Gray placeholder if iframe fails to load */
+}
+
+/* Form Layout Styling */
+.contact-form form {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    row-gap: 15px;
+    align-items: center;
+}
+
+.contact-form label:not(.checkbox, fieldset label) {
+    font-weight: bold;
+    align-self: start;
+    margin-top: 8px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Fieldset (Radio Buttons) Alignment */
+fieldset {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset legend {
+    font-weight: bold;
+    grid-column: 1;
+    float: left;
+    padding-top: 2px;
+}
+
+fieldset label {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Checkbox Alignment */
+.contact-form .checkbox {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* Form Button */
+.contact-form button[type="submit"] {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 12px;
+    background-color: #e0e0e0;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #d0d0d0;
+}
+
+/* ---- Employee Section ---- */
+.employees {
+    border: 1px solid #777;
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.employees h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.employees figure {
+    display: inline-block;
+    margin: 0 30px;
+    text-align: center;
+}
+
+.employees img {
+    width: 120px;
+    height: 120px;
+    background-color: #cccccc;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.employees figcaption {
+    font-size: 1rem;
+}
+
+/* ---- Footer ---- */
+footer {
+    background-color: var(--primary-color);
+    border: 1px solid #777;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.sociallinks {
+    display: flex;
+    gap: 15px;
+}
+
+.sociallinks img {
+    width: 40px;
+    height: 40px;
+}
